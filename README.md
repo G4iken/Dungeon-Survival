@@ -153,3 +153,16 @@ The dungeon now has 5 floors. Entering the exit portal on Floors 1-4 generates a
 ## UI Update
 
 The interface uses a dark fantasy roguelike style: bronze/gold borders, glass panels, a top HUD, minimap, quick item bar, cooldown indicators, rarity-colored inventory cards, and upgraded victory/game-over screens.
+
+## Vercel Deployment Notes
+
+This project includes `vercel.json` and `.npmrc` for Vercel deployment.
+
+Recommended Vercel settings:
+- Framework Preset: Vite
+- Install Command: npm install --no-audit --no-fund
+- Build Command: npm run build
+- Output Directory: dist
+- Node.js Version: 20.x
+
+If deployment fails during dependency installation, delete `package-lock.json`, run `npm install` locally, commit the new lock file, and redeploy.
